@@ -5,22 +5,20 @@
  * @version v0.1
  */
 
-(function(mui, doc) {
-	//命名空间
-	fnNamespace("com.his.lc.doctorinput");
+(function(mui, doc, appdoctorinput) {
 
 	/**
 	 * 初期化页面
 	 */
-	com.his.lc.doctorinput.fnMuiInit = function() {
+	appdoctorinput.fnMuiInit = function() {
 		mui.init({
 			statusBarBackground: '#f7f7f7'
 		});
 
 		mui.plusReady(function() {
 			mui.toast("当前是明细画面");
-			com.his.lc.doctorinput.fnGetSetting();
-			com.his.lc.doctorinput.fnGetTableDetail();
+			appdoctorinput.fnGetSetting();
+			appdoctorinput.fnGetTableDetail();
 			var sData = plus.webview.currentWebview();
 			var nameObj = mui('#name');
 			nameObj[0].value = sData.name;
@@ -34,7 +32,7 @@
 	/**
 	 * 设置页面功能
 	 */
-	com.his.lc.doctorinput.fnGetSetting = function() {
+	appdoctorinput.fnGetSetting = function() {
 		var settingPage = mui.preload({
 			"id": 'setting',
 			"url": 'setting.html'
@@ -57,11 +55,11 @@
 		});
 	}
 
-	com.his.lc.doctorinput.fnGetTableDetail = function() {
+	appdoctorinput.fnGetTableDetail = function() {
 		$(document).ready(function() {
 
 		});
 	}
 
-	com.his.lc.doctorinput.fnMuiInit();
-}(mui, document))
+	appdoctorinput.fnMuiInit();
+}(mui, document, window.appdoctorinput = {}))

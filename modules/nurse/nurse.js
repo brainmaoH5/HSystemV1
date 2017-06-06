@@ -5,34 +5,32 @@
  * @version v0.1
  */
 
-(function(mui, doc) {
-	//命名空间
-	fnNamespace("com.his.lc.nurse");
-	
+(function(mui, doc, appnurse) {
+
 	/**
 	 * 初期化页面
 	 */
-	com.his.lc.nurse.fnMuiInit = function() {
+	appnurse.fnMuiInit = function() {
 		mui.init({
 			statusBarBackground: '#f7f7f7'
 		});
 
 		mui.plusReady(function() {
 			mui.toast("当前是通过对象的形式以ajax取得table数据");
-			com.his.lc.nurse.fnGetSetting();
-			com.his.lc.nurse.fnGetTableList();
+			appnurse.fnGetSetting();
+			appnurse.fnGetTableList();
 		})
 	}
 
 	/**
 	 * 设置页面功能
 	 */
-	com.his.lc.nurse.fnGetSetting = function() {
+	appnurse.fnGetSetting = function() {
 		var settingPage = mui.preload({
 			"id": 'setting',
 			"url": 'setting.html'
 		});
-		
+
 		var settingButton = doc.getElementById('setting');
 		settingButton.addEventListener('tap', function(event) {
 			mui.openWindow({
@@ -49,11 +47,11 @@
 			});
 		});
 	}
-	
+
 	/**
 	 * 数据列表取得
 	 */
-	com.his.lc.nurse.fnGetTableList = function() {
+	appnurse.fnGetTableList = function() {
 		$(document).ready(function() {
 			$('#example').DataTable({
 				"ajax": "../data/doctorobjects.txt",
@@ -119,5 +117,5 @@
 		});
 	}
 
-	com.his.lc.nurse.fnMuiInit();
-}(mui, document))
+	appnurse.fnMuiInit();
+}(mui, document, window.appnurse = {}))

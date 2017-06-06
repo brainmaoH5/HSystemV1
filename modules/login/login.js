@@ -5,37 +5,38 @@
  * @version v0.1
  */
 
-(function(mui, doc) {
-	//命名空间
-	fnNamespace("com.his.lc.login");
+(function(mui, doc,applogin) {
 
 	//全局变量用于记录开关的状态
 	var g_Flag;
 
-	//mui初期化顶部的bar颜色为白色背景
-	mui.init({
-		statusBarBackground: '#f7f7f7'
-	});
+	applogin.fnMuiInit = function() {
+		//mui初期化顶部的bar颜色为白色背景
+		mui.init({
+			statusBarBackground: '#f7f7f7'
+		});
 
-	mui.plusReady(function() {
-		//判断localStorage中是否纯在缓存记录
-		var Id = localStorage.getItem("txtId");
-		//如果缓存中有数据，则加载出来
-		if(Id != null) {
-			doc.getElementById("account").value = Id;
-			doc.getElementById("password").value = localStorage.getItem("txtPwd");
-			doc.getElementById("autoLogin").setAttribute("class", "mui-switch mui-active")
-		}
-		com.his.lc.login.switchButton();
-		com.his.lc.login.loginTo();
-	});
+		mui.plusReady(function() {
+			//判断localStorage中是否纯在缓存记录
+			var Id = localStorage.getItem("txtId");
+			//如果缓存中有数据，则加载出来
+			if(Id != null) {
+				doc.getElementById("account").value = Id;
+				doc.getElementById("password").value = localStorage.getItem("txtPwd");
+				doc.getElementById("autoLogin").setAttribute("class", "mui-switch mui-active")
+			}
+			applogin.switchButton();
+			applogin.loginTo();
+		});
+	}
+
 	/**
 	 * 登录跳转
 	 */
-	com.his.lc.login.loginTo = function() {
+	applogin.loginTo = function() {
 		var login = doc.getElementById("login");
 		login.addEventListener('tap', function() {
-			if(com.his.lc.login.checkLogin()) {
+			if(applogin.checkLogin()) {
 				if(g_Flag == true) {
 					var id = doc.getElementById("account").value;
 					var pwd = doc.getElementById("password").value;
@@ -57,7 +58,7 @@
 	/**
 	 * 用户名密码check
 	 */
-	com.his.lc.login.checkLogin = function() {
+	applogin.checkLogin = function() {
 		var accountval = doc.getElementById("account");
 		var passwordval = doc.getElementById("password");
 		var message = "请输入用户名或密码";
@@ -79,7 +80,7 @@
 	/**
 	 * 判断开关状态
 	 */
-	com.his.lc.login.switchButton = function() {
+	applogin.switchButton = function() {
 		doc.getElementById("autoLogin").addEventListener("toggle", function(event) {
 			if(event.detail.isActive) {
 				console.log("你启动了开关");
@@ -90,4 +91,5 @@
 			}
 		})
 	}
-}(mui, document));
+	applogin.fnMuiInit();
+}(mui, document,window.applogin={}));

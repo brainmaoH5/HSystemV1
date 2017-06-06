@@ -5,29 +5,27 @@
  * @version v0.1
  */
 
-(function(mui, doc) {
-	//命名空间
-	fnNamespace("com.his.lc.doctor");
+(function(mui, doc, appdoctor) {
 
 	/**
 	 * 初期化页面
 	 */
-	com.his.lc.doctor.fnMuiInit = function() {
+	appdoctor.fnMuiInit = function() {
 		mui.init({
 			statusBarBackground: '#f7f7f7'
 		});
 
 		mui.plusReady(function() {
 			mui.toast("当前是通过对象的形式以ajax取得table数据");
-			com.his.lc.doctor.fnGetSetting();
-			com.his.lc.doctor.fnGetTableList();
+			appdoctor.fnGetSetting();
+			appdoctor.fnGetTableList();
 		})
 	}
 
 	/**
 	 * 设置页面功能
 	 */
-	com.his.lc.doctor.fnGetSetting = function() {
+	appdoctor.fnGetSetting = function() {
 		var settingPage = mui.preload({
 			"id": 'setting',
 			"url": 'setting.html'
@@ -53,7 +51,7 @@
 	/**
 	 * 数据列表取得
 	 */
-	com.his.lc.doctor.fnGetTableList = function() {
+	appdoctor.fnGetTableList = function() {
 		$(document).ready(function() {
 			$('#example').DataTable({
 				"ajax": "../data/doctorobjects.txt",
@@ -119,5 +117,5 @@
 		});
 	}
 
-	com.his.lc.doctor.fnMuiInit();
-}(mui, document))
+	appdoctor.fnMuiInit();
+}(mui, document, window.appdoctor = {}))
