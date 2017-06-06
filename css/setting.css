@@ -1,0 +1,12 @@
+.mui-scroll-wrapper,
+.mui-scroll {
+	background-color: #efeff4;
+}
+
+.mui-table-view:first-child {
+	margin-top: 60px;
+}
+
+.mui-table-view {
+	margin-top: 20px;
+}

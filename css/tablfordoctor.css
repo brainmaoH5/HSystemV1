@@ -1,0 +1,17 @@
+table.dataTable thead th {
+	padding: 10px 18px;
+	background-color: #555;
+	color: white;
+	border-bottom: 1px solid #111;
+	text-align: left;
+}
+
+#example_filter {
+	margin-top: 55px;
+	float: left;
+	text-align: left;
+}
+
+input[type=search] {
+	text-align: left;
+}

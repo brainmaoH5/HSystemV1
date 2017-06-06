@@ -1,0 +1,144 @@
+{
+	"index.html": {
+		"resources": [
+			"js/jquery.dataTables.min.js",
+			"js/mui.min.js",
+			"fonts/mui.ttf",
+			"css/dataTables.min.css",
+			"css/mui.min.css",
+			"js/jquery-2.1.1.js",
+			"tables.html",
+			"css/index.css",
+			"css/iconfont.css",
+			"css/iconfont.woff",
+			"js/mui/mui.min.js",
+			"js/jquery/jquery-2.1.1.js",
+			"js/namespace/namespace.js",
+			"js/jquery/jquery.dataTables.min.js",
+			"fonts/iconfont.woff",
+			"modules/login/index.js"
+		],
+		"refer": [
+			"tables.html",
+			"tableseasy.html",
+			"tablesobject.html",
+			"view/tablesobject.html",
+			"view/tablfordoctor.html",
+			"view/tablefornurse.html",
+			"setting.html"
+		]
+	},
+	"tables.html": {
+		"resources": [
+			"js/jquery.dataTables.min.js",
+			"js/mui.min.js",
+			"css/dataTables.min.css",
+			"css/mui.min.css",
+			"js/jquery-2.1.1.js",
+			"data/arrays.txt"
+		]
+	},
+	"tableseasy.html": {
+		"resources": [
+			"data/arrays.txt",
+			"js/jquery.dataTables.min.js",
+			"js/mui.min.js",
+			"css/dataTables.min.css",
+			"css/mui.min.css",
+			"js/jquery-2.1.1.js"
+		]
+	},
+	"tablesobject.html": {
+		"resources": [
+			"data/objects.txt",
+			"js/jquery.dataTables.min.js",
+			"js/mui.min.js",
+			"css/dataTables.min.css",
+			"css/mui.min.css",
+			"js/jquery-2.1.1.js",
+			"css/tablesobject.css",
+			"fonts/mui.ttf"
+		],
+		"refer": [
+			"input.html"
+		]
+	},
+	"input.html": {
+		"resources": [
+			"fonts/mui.ttf",
+			"js/mui.min.js",
+			"css/mui.min.css",
+			"js/jquery-2.1.1.js",
+			"css/input.css"
+		]
+	},
+	"view/tablesobject.html": {
+		"resources": [
+			"modules/nurse/nurse.js",
+			"css/tablesobject.css",
+			"data/objects.txt"
+		],
+		"refer": [
+			"view/input.html"
+		]
+	},
+	"login.html": {
+		"resources": [
+			"js/mui/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"modules/login/login.js",
+			"js/namespace/namespace.js"
+		],
+		"refer": [
+			"index.html"
+		]
+	},
+	"view/tablfordoctor.html": {
+		"resources": [
+			"modules/doctore/doctor.js",
+			"data/doctorobjects.txt",
+			"css/tablefornurse.css",
+			"js/jquery/jquery-2.1.1.js",
+			"css/dataTables.min.css",
+			"js/jquery/jquery.dataTables.min.js"
+		],
+		"refer": [
+			"view/doctorinput.html"
+		]
+	},
+	"view/doctorinput.html": {
+		"resources": [
+			"modules/doctore/doctorinput.js",
+			"css/doctorinput.css"
+		]
+	},
+	"view/tablefornurse.html": {
+		"resources": [
+			"modules/nurse/nurse.js",
+			"data/doctorobjects.txt",
+			"css/tablfordoctor.css"
+		],
+		"refer": [
+			"view/nurseinput.html"
+		]
+	},
+	"view/nurseinput.html": {
+		"resources": [
+			"css/nurseinput.css",
+			"modules/nurse/nurseinput.js"
+		]
+	},
+	"setting.html": {
+		"resources": [
+			"js/mui/mui.min.js",
+			"fonts/mui.ttf",
+			"css/mui.min.css",
+			"modules/login/setting.js",
+			"css/setting.css"
+		],
+		"refer": [
+			"login.html"
+		]
+	}
+}

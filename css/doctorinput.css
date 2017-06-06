@@ -1,0 +1,15 @@
+.mui-row {
+	height: 100px;
+}
+
+.mui-input-row label~input {
+	float: right;
+	width: 65%;
+	margin-bottom: 0;
+	padding-left: 0;
+	border: 1px solid rgba(0, 0, 0, .2);
+}
+
+.mui-bar-nav~.mui-content {
+	padding-top: 80px;
+}
